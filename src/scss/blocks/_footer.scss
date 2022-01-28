@@ -1,0 +1,25 @@
+.footer {
+	padding: 0px 0px 40px 0px;
+	&__nav {
+		margin: 0px 0px 40px 0px;
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		li {
+			margin: 0px 10px;
+			a {
+				padding: 0rem 2.7rem;
+				font-size: 1rem;
+				line-height: 2.7rem;
+			}
+		}
+	}
+	&__copy {
+		text-align: center;
+		font-size: 1.3rem;
+		span {
+			color: $mainColor;
+		}
+	}
+}

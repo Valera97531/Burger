@@ -1,0 +1,51 @@
+.reviews {
+	padding: 0px 0px 70px 0px;
+	&__img,
+	&__title {
+		text-align: center;
+	}
+	&__img {
+		margin: 0px 0px 15px 0px;
+	}
+	&__title {
+		font-size: 2.2rem;
+		margin: 0px 0px 60px 0px;
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(33.3333%, 1fr));
+		text-align: center;
+	}
+	&__item {
+		padding: 0px 10%;
+	}
+	&__photo {
+		margin: 0px 0px 15px 0px;
+		img {
+			width: 5rem;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+	}
+	&__name {
+		font-size: 1.4rem;
+		margin-bottom: 10px;
+	}
+	&__text {
+		line-height: 1.8rem;
+		margin: 0px 0px 15px 0px;
+		text-align: justify;
+	}
+	&__stars {
+		display: flex;
+		justify-content: center;
+		margin: 0px 0px 20px 0px;
+		svg {
+			width: 1.3rem;
+			fill: $mainColor;
+			&:not(:last-child) {
+				margin: 0px 5px 0px 0px;
+			}
+		}
+	}
+}

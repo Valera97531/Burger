@@ -7,6 +7,7 @@
 	transition: all 0.6s ease;
 	&__active {
 		border-bottom: 2px solid #545454;
+		transition: all 0.6s ease;
 	}
 	&__logo {
 		position: absolute;
@@ -23,19 +24,17 @@
 	&__search,
 	&__searching,
 	&__shop {
+		cursor: pointer;
 		svg {
 			width: 20px;
 			height: 20px;
 			fill: #fff;
 			transition: all 0.4s ease;
 			&:hover {
-				fill: #e5c54b;
+				fill: $mainColor;
 			}
 		}
 	}
-	&__search {
-	}
-
 	&__list {
 		display: flex;
 		& > li {
@@ -44,7 +43,7 @@
 				padding: 0px 210px 0px 0px;
 			}
 			& > a {
-				color: $textColor;
+				color: #dbd7d9;
 				font-size: 1.42rem;
 				position: relative;
 				transition: all 0.6s ease;
@@ -52,7 +51,7 @@
 					content: "";
 					width: 100%;
 					height: 1px;
-					background: #e5c54b;
+					background: $mainColor;
 					position: absolute;
 					left: 0;
 					bottom: -7px;
@@ -61,7 +60,7 @@
 					transition: all 0.6s ease;
 				}
 				&:hover {
-					color: #e5c54b;
+					color: $mainColor;
 					&:before {
 						opacity: 1;
 						visibility: visible;
@@ -72,7 +71,7 @@
 	}
 	&__searching {
 		z-index: 80;
-		position: absolute;
+		position: fixed;
 		height: 70px;
 		left: 0;
 		top: 100px;
@@ -101,4 +100,8 @@
 ._active {
 	transform: translateY(0);
 	opacity: 1;
+}
+
+.none {
+	display: none;
 }
