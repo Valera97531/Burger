@@ -4,6 +4,14 @@
 import * as flsFunctions from "./modules/function.js";
 flsFunctions.isWebp();
 
+import AOS from "aos";
+AOS.init({
+	disable: 'phone'
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 	let headerSearch = document.querySelector('.header__search'),
 		headerSearching = document.querySelector('.header__searching'),
@@ -19,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			search.classList.toggle('none');
 		})
 	};
-
 
 
 });
