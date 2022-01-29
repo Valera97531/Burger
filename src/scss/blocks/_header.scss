@@ -1,3 +1,21 @@
+@keyframes closeRotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes seacrhRotateOut {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
 .header {
 	min-height: 100px;
 	width: 100%;
@@ -20,6 +38,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 	}
 	&__search,
 	&__searching,
@@ -102,6 +121,27 @@
 	opacity: 1;
 }
 
+.close {
+	width: 23px;
+	height: 23px;
+	display: none;
+}
+
+.vis {
+	display: block;
+	animation: closeRotate 700ms;
+}
+
 .none {
 	display: none;
+	opacity: 0;
+	transition: opacity 5s ease;
+	animation: seacrhRotateOut 700ms;
+}
+
+.search-vis {
+	animation: seacrhRotateOut 700ms;
+	display: block;
+	opacity: 1;
+	transition: opacity 5s ease;
 }
