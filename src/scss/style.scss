@@ -13,6 +13,9 @@ html {
 
 body {
 	font-family: $fontFamilyMain;
+	&._lock {
+		overflow: hidden;
+	}
 }
 
 .wrapper {

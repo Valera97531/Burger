@@ -28,6 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	};
 
+	let burger = document.querySelector('.header__burger'),
+		headerList = document.querySelector('.header__list');
+
+	burger.addEventListener('click', () => {
+		document.body.classList.toggle('_lock');
+		headerList.classList.toggle('active');
+		burger.classList.toggle('active');
+	});
+
+	let headerLink = document.querySelectorAll('.header__link');
+
+	headerLink.forEach(item => {
+		item.addEventListener('click', () => {
+			headerList.classList.remove('active');
+			document.body.classList.remove('_lock');
+		});
+	});
 
 });
 
