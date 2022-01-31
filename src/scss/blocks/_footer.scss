@@ -1,23 +1,30 @@
 .footer {
 	padding: 0px 0px 40px 0px;
 	&__nav {
-		margin: 0px 0px 40px 0px;
+		margin: 0px 0px 20px 0px;
 	}
 	&__list {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		li {
-			margin: 0px 10px;
+			margin: 0px 10px 20px;
+			@media (max-width: 900px) {
+			}
 			a {
 				padding: 0rem 2.7rem;
 				font-size: 1rem;
 				line-height: 2.7rem;
+				@media (max-width: $md4 + px) {
+					padding: 0rem 2.5rem;
+				}
 			}
 		}
 	}
 	&__copy {
 		text-align: center;
 		font-size: 1.3rem;
+		line-height: 2rem;
 		span {
 			color: $mainColor;
 		}

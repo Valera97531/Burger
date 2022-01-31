@@ -1,5 +1,8 @@
 .menu {
 	padding: 0px 0px 100px 0px;
+	@media (max-width: $md4 + px) {
+		padding: 0px 0px 60px 0px;
+	}
 	&__img,
 	&__title {
 		text-align: center;
@@ -15,8 +18,15 @@
 
 .rows-menu {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(33.3333%, 1fr));
+	grid-template: auto / repeat(auto-fit, minmax(33.3333%, 1fr));
 	row-gap: 40px;
+	@media (max-width: $md2 + px) {
+		grid-template: auto / repeat(2, 45%);
+		justify-content: center;
+	}
+	@media (max-width: 640px) {
+		grid-template: auto / 100%;
+	}
 	&__item {
 		text-align: center;
 		&:hover img {
@@ -33,15 +43,24 @@
 			&:not(:last-child) {
 				margin: 0px 5px 0px 0px;
 			}
+			@media (max-width: $md4 + px) {
+				width: 1.2rem;
+			}
 		}
 	}
 	&__img {
 		width: 20rem;
 		transition: all 0.6s ease;
+		@media (max-width: $md3 + px) {
+			width: 17rem;
+		}
 	}
 	&__title {
 		margin: 0px 0px 15px 0px;
 		font-size: 1.5rem;
+		@media (max-width: $md3 + px) {
+			font-size: 1.3rem;
+		}
 	}
 	&__price {
 		margin: 0px 0px 20px 0px;

@@ -1,5 +1,8 @@
 .about {
 	padding: 0px 0px 100px 0px;
+	@media (max-width: $md4 + px) {
+		padding: 0px 0px 60px 0px;
+	}
 	&__img,
 	&__title {
 		text-align: center;
@@ -10,54 +13,110 @@
 	&__title {
 		font-size: 2.2rem;
 		margin: 0px 0px 40px 0px;
+		@media (max-width: $md2 + px) {
+			margin: 0;
+		}
+		@media (max-width: 540px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 }
 
 .content-about {
 	display: flex;
 	align-items: center;
+	@media (max-width: $md2 + px) {
+		flex-direction: column;
+	}
 	&__item {
 		color: #fff;
 	}
 	&__img {
 		width: 50%;
-
+		@media (max-width: $md2 + px) {
+			width: 65%;
+		}
+		@media (max-width: 540px) {
+			width: 90%;
+		}
 		img {
 			width: 100%;
 		}
 	}
 	&__item {
 		width: 50%;
+		@media (max-width: $md2 + px) {
+			width: 80%;
+			text-align: center;
+		}
+		@media (max-width: 540px) {
+			width: 100%;
+		}
 	}
 	&__title {
 		font-size: 2.1rem;
 		line-height: 3rem;
 		margin: 0px 0px 15px 0px;
+		@media (max-width: 540px) {
+			font-size: 1.9rem;
+			line-height: 2.5rem;
+		}
 	}
 	&__text {
 		font-size: 1.1rem;
 		line-height: 2.1rem;
 		margin: 0px 0px 30px 0px;
+		@media (max-width: $md2 + px) {
+			text-align: justify;
+		}
+		@media (max-width: 540px) {
+			line-height: 2.2rem;
+		}
 	}
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 0px 0px 10px 0px;
+		@media (max-width: 700px) {
+			display: grid;
+			grid-template: auto / repeat(2, 50%);
+		}
 		li {
 			font-weight: 500;
-			flex: 0 1 33.3333%;
+			flex: 0 0 33.3333%;
 			font-size: 1.2rem;
 			padding: 0px 0px 0px 30px;
 			margin: 0px 0px 20px 0px;
 			position: relative;
+			text-align: left;
+			@media (max-width: 1060px) {
+				font-size: 1.1rem;
+				padding: 0px 0px 0px 25px;
+			}
+			@media (max-width: $md2 + px) {
+				font-size: 1.2rem;
+				padding: 0px 0px 0px 30px;
+			}
+			@media (max-width: 540px) {
+				font-size: 1rem;
+				padding: 0px 0px 0px 20px;
+			}
 			svg {
 				width: 1.4rem;
 				fill: $mainColor;
 				position: absolute;
-				top: -2px;
+				top: 0;
 				left: 0;
+				@media (max-width: 540px) {
+					width: 1.1rem;
+				}
 			}
+		}
+	}
+	&__link {
+		@media (max-width: 400px) {
+			width: 100%;
 		}
 	}
 }
