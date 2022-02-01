@@ -114,22 +114,6 @@ h6 {
 @font-face {
   font-family: Raleway;
   font-display: swap;
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Raleway;
-  font-display: swap;
-  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Raleway;
-  font-display: swap;
   src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -140,6 +124,22 @@ h6 {
   font-display: swap;
   src: url("../fonts/Raleway-Thin.woff2") format("woff2"), url("../fonts/Raleway-Thin.woff") format("woff");
   font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -2970,6 +2970,10 @@ body._lock {
   .rows-menu__title {
     font-size: 1.3rem;
   }
+
+  .about {
+    padding: 0px 0px 60px 0px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -3120,10 +3124,6 @@ body._lock {
 
   .rows-menu__stars svg {
     width: 1.2rem;
-  }
-
-  .about {
-    padding: 0px 0px 60px 0px;
   }
 
   .reviews {
